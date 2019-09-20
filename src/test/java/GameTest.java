@@ -36,6 +36,15 @@ public class GameTest {
         assertThat(game.score(), is(20));
     }
 
+    @Test
+    public void canScoreSpareFollowedByThree() {
+        game.roll(5);
+        game.roll(5);
+        game.roll(3);
+        roll(17, 0);
+        assertThat(game.score(), is(16));
+    }
+
     private void roll(int times, int pinsDown) {
         for (int i = 0; i < times; i++) {
             game.roll(pinsDown);
