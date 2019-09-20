@@ -26,10 +26,12 @@ public class GameTest {
 
     @Test
     public void canScoreGutterGame() {
-        for (int i = 0; i < 20; i++) {
-            game.roll(0);
+        int times = 20;
+        int pinsDown = 0;
+        for (int i = 0; i < times; i++) {
+            game.roll(pinsDown);
         }
-        assertThat(game.score(), is(0));
+        assertThat(game.score(), is(pinsDown));
     }
 
     @Test
