@@ -34,6 +34,5 @@ public class GameTest {
             game.roll(1);
         }
         assertThat(game.score(), is(20));
-
     }
 }
