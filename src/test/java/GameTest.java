@@ -41,4 +41,10 @@ public class GameTest {
         game.roll(5,5, 3,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0);
         assertThat(game.score(), is(16));
     }
+
+    @Test
+    public void canScoreStrikeFollowedByTwoThrees() {
+        game.roll(10,3, 3,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0);
+        assertThat(game.score(), is(22));
+    }
 }
