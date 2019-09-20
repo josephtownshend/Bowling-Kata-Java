@@ -1,3 +1,4 @@
+import org.junit.Before;
 import org.junit.Test;
 import static org.hamcrest.CoreMatchers.*;
 import static org.hamcrest.MatcherAssert.*;
@@ -6,21 +7,25 @@ import static org.hamcrest.MatcherAssert.*;
 
 public class GameTest {
 
+    private Game game;
+
+    @Before
+    public void setUp() {
+        game = new Game();
+    }
+
     @Test
     public void canMakeGame() {
-
         new Game();
     }
 
     @Test
     public void canRollBall() {
-        Game game = new Game();
         game.roll(0);
     }
 
     @Test
     public void canScoreGutterGame() {
-        Game game = new Game();
         for (int i = 0; i < 20; i++) {
             game.roll(0);
         }
@@ -29,7 +34,6 @@ public class GameTest {
 
     @Test
     public void canScoreGameOfOnes() {
-        Game game = new Game();
         for (int i = 0; i < 20; i++) {
             game.roll(1);
         }
