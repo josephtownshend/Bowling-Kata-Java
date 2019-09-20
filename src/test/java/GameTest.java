@@ -26,19 +26,19 @@ public class GameTest {
 
     @Test
     public void canScoreGutterGame() {
-        int times = 20;
-        int pinsDown = 0;
-        for (int i = 0; i < times; i++) {
-            game.roll(pinsDown);
-        }
-        assertThat(game.score(), is(pinsDown));
+        roll(20, 0);
+        assertThat(game.score(), is(0));
     }
 
     @Test
     public void canScoreGameOfOnes() {
-        for (int i = 0; i < 20; i++) {
-            game.roll(1);
-        }
+        roll(20, 1);
         assertThat(game.score(), is(20));
+    }
+
+    private void roll(int times, int pinsDown) {
+        for (int i = 0; i < times; i++) {
+            game.roll(pinsDown);
+        }
     }
 }
