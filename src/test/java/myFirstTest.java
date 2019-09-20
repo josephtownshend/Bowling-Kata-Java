@@ -7,6 +7,10 @@ public class myFirstTest {
     public void ATestMethod() {
         Assert.assertTrue(true);
     }
+    @Test
+    public void ATestMethod2() {
+        Assert.assertFalse(false);
+    }
 
 
 }
