@@ -7,7 +7,8 @@
                                                                              
 ```
 
-Attempt at the bowling scorecard kata in Java using TDD.
+Follow along of the bowling scorecard kata in Java using TDD.
+https://www.youtube.com/watch?v=jKnLZC38_r4
 
 ### Installation
 
